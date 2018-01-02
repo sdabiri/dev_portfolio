@@ -1,0 +1,2 @@
+class BlogFeature < ApplicationRecord
+end

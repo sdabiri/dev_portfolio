@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blog Features</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blog_features.each do |blog_feature| %>
+      <tr>
+        <td><%= blog_feature.title %></td>
+        <td><%= blog_feature.body %></td>
+        <td><%= link_to 'Show', blog_feature %></td>
+        <td><%= link_to 'Edit', edit_blog_feature_path(blog_feature) %></td>
+        <td><%= link_to 'Destroy', blog_feature, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blog Feature', new_blog_feature_path %>
