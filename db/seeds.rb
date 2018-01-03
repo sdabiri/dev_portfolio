@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do |blog|
+BlogFeature.create!(
+  title: "Blog Post #{blog}",
+  body:  "the blog #{blog} is amazing" 
+  )
+end
+
+puts "10 blog posts created"
